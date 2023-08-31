@@ -11,13 +11,17 @@ const Thead = () => {
   return (
     <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
       <tr>
-        <th scope="col" className="px-6 py-3">
-          Stats
+        <th scope="col" className="px-6 py-3 text-center">
+          <span className="font-medium text-gray-900 whitespace-nowrap dark:text-white">
+            Stats
+          </span>
+          <br />
+          <span>Click on superhero image to deep dive</span>
         </th>
         {compares.map(({ id, image, name }) => (
           <th key={id} scope="col" className="px-6 py-3">
             <div
-              className="flex flex-col"
+              className="flex flex-col items-center cursor-pointer"
               onClick={() =>
                 navigate(`/superhero/${id}`, {
                   state: { id: id },
@@ -29,7 +33,7 @@ const Thead = () => {
                 src={image?.url}
                 alt="Rounded avatar"
               />
-              <span>{name}</span>
+              <span className="text-center capitalize">{name}</span>
             </div>
           </th>
         ))}
