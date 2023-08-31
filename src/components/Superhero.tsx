@@ -20,6 +20,11 @@ const Superhero: React.FC<ISuperhero> = ({
 
   const navigate = useNavigate();
 
+  const handleCompareClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation();
+    addCompare({ id, image, name, appearance, biography, powerstats });
+  };
+
   return (
     <div
       className={`${styles.superhero} lg:w-[250px] p-4 mb-4 mr-4 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700`}
@@ -34,7 +39,7 @@ const Superhero: React.FC<ISuperhero> = ({
           <img
             className="w-20 h-20 mb-3 rounded-full shadow-lg mr-5"
             src={`${image?.url}`}
-            alt="Bonnie image"
+            alt={`${name} image`}
           />
         )}
         <h5 className="mb-2 text-1xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -46,9 +51,7 @@ const Superhero: React.FC<ISuperhero> = ({
       ) : (
         <button
           disabled={compares.length === 6}
-          onClick={() =>
-            addCompare({ id, image, name, appearance, biography, powerstats })
-          }
+          onClick={handleCompareClick}
           className="inline-flex mt-4 px-3 py-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
           Compare
