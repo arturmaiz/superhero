@@ -27,7 +27,7 @@ const Superhero: React.FC<ISuperhero> = ({
 
   return (
     <div
-      className={`${styles.superhero} lg:w-[250px] p-4 mb-4 mr-4 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700`}
+      className={`${styles.superhero} cursor-pointer lg:w-[250px] p-4 mb-4 mr-4 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700`}
       onClick={() =>
         navigate(`/superhero/${id}`, {
           state: { id: id },
