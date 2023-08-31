@@ -49,6 +49,12 @@ const SuperheroStats = () => {
     <section className={`${styles.container} bg-white dark:bg-gray-900`}>
       <div className="py-4 px-4 mx-auto max-w-screen-xl lg:py-16">
         <div className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:p-12 mb-8">
+          <a
+            href="/"
+            className="bg-green-100 mb-4 text-green-800 text-xs font-medium inline-flex items-center px-2.5 py-1 rounded-md dark:bg-blue-900 dark:text-blue-300 mr-5"
+          >
+            Back to home
+          </a>
           <span className="bg-green-100 mb-4 text-green-800 text-xs font-medium inline-flex items-center px-2.5 py-1 rounded-md dark:bg-green-900 dark:text-green-300">
             {name}
           </span>
