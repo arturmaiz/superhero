@@ -50,6 +50,16 @@ const Home = () => {
     <section className={`${styles.container} bg-white dark:bg-gray-900`}>
       <div className="w-screen mx-auto max-w-screen-xl lg:py-16">
         <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+        {superheros && superheros.length !== 0 && (
+          <>
+            <span className="inline-block mb-5 bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
+              Click on card to deep dive 👇
+            </span>
+            <span className="inline-block mb-5 bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">
+              Compare superheros 👇
+            </span>
+          </>
+        )}
         <div className="grid md:grid-cols-2 gap-4">
           <div
             className={`flex justify-around flex-wrap ${SuperherosStyles["cards-container"]}`}

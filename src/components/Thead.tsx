@@ -11,12 +11,14 @@ const Thead = () => {
   return (
     <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
       <tr>
-        <th scope="col" className="px-6 py-3 text-center">
-          <span className="font-medium text-gray-900 whitespace-nowrap dark:text-white">
+        <th scope="col" className="px-6 py-3">
+          <span className="text-lg text-gray-900 whitespace-nowrap dark:text-white capitalize">
             Stats
           </span>
           <br />
-          <span>Click on superhero image to deep dive</span>
+          <span className="capitalize">
+            Click on superhero image to deep dive
+          </span>
         </th>
         {compares.map(({ id, image, name }) => (
           <th key={id} scope="col" className="px-6 py-3">

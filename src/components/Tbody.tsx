@@ -38,7 +38,7 @@ const Tbody: React.FC<TbodyProps> = ({ cells }) => {
                 );
 
                 return (
-                  <td key={cell.name + i} className="px-6 py-4">
+                  <td key={cell.name + i} className="px-6 py-4 text-center">
                     {content}
                   </td>
                 );
