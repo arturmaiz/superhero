@@ -1,5 +1,5 @@
 export interface ISuperhero {
-  [key: string]: unknown;
+  [key: string]: any;
   id: number | string;
   name?: string;
   image?: {
