@@ -35,7 +35,7 @@ const SuperherosProvider: React.FC<ISuperherosProviderProps> = ({
     }
   };
 
-  const removeCompare = (id: number) => {
+  const removeCompare = (id: string | number) => {
     setCompares((prev) => prev.filter((superhero) => superhero.id !== id));
   };
 
